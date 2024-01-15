@@ -75,6 +75,7 @@ export default function PackageIndex() {
   };
 
   useEffect(() => {
+    window.getPackageList = getPackageList;
     getPackageList();
   }, []);
 
@@ -113,6 +114,7 @@ export default function PackageIndex() {
             setRemoveId={setRemoveId}
             setSelectedPackage={setSelectedPackage}
             setEditPackageDialogVisible={setEditPackageDialogVisible}
+            className="package-item"
           />
         ))}
       </ul>
